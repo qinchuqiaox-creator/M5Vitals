@@ -20,6 +20,10 @@ struct Metrics: Decodable {
         let max_rpm: Int?
     }
     let temp: Temp?
+    // 新字段（macmon ≥ 0.9）
+    let cpu_scaled_ratio: Double?
+    let gpu_scaled_ratio: Double?
+    // v0.7 兼容别名（上游已标 deprecated，仅兜底）
     let cpu_usage_pct: Double?
     let gpu_usage: [Double]?
     let sys_power: Double?
@@ -68,8 +72,12 @@ final class Store: ObservableObject {
         online = true
         if let v = m.temp?.cpu_temp_avg { cpuTemp = v }
         if let v = m.temp?.gpu_temp_avg { gpuTemp = v }
-        if let v = m.cpu_usage_pct { cpuPct = max(0, min(100, v * 100)) }
-        if let g = m.gpu_usage, g.count > 1 { gpuPct = max(0, min(100, g[1] * 100)) }
+        if let v = m.cpu_scaled_ratio ?? m.cpu_usage_pct { cpuPct = max(0, min(100, v * 100)) }
+        if let v = m.gpu_scaled_ratio {
+            gpuPct = max(0, min(100, v * 100))
+        } else if let g = m.gpu_usage, g.count > 1 {
+            gpuPct = max(0, min(100, g[1] * 100))
+        }
         if let v = m.sys_power { power = v }
         if let mem = m.memory {
             if let u = mem.ram_usage { ramUsed = u / 1_073_741_824 }
