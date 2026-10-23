@@ -8,7 +8,9 @@
 
 **Minimal CPU / GPU temperature on your desktop.**
 
-[中文](#中文) · [English](#english) · [日本語](#日本語) · [Install prompt](INSTALL_PROMPT.md)
+[中文](#中文) · [English](#english) · [日本語](#日本語) · [Install prompt](INSTALL_PROMPT.md) · [**原生 WidgetKit 版 ↗**](https://github.com/qinchuqiaox-creator/M5Vitals-WidgetKit)
+
+> 两个版本：这个仓库是**窗口版**（2 秒实时、只要命令行工具）；另有一个 [**WidgetKit 原生版**](https://github.com/qinchuqiaox-creator/M5Vitals-WidgetKit)（进小组件库、系统吸附、刷新 1/5/15/30 分钟可选，需要 Xcode）。
 
 </div>
 
