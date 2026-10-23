@@ -57,7 +57,7 @@ brew install macmon
 macmon serve --install --host 127.0.0.1 --port 41414
 
 # 2) 编译小组件（只需要 Xcode Command Line Tools，不需要完整 Xcode）
-git clone https://github.com/<your-name>/M5Vitals.git
+git clone https://github.com/qinchuqiaox-creator/M5Vitals.git
 cd M5Vitals
 ./build.sh            # → ~/Applications/M5Vitals.app
 
@@ -123,7 +123,7 @@ If macmon is useful to you, go star it ⭐.
 brew install macmon
 macmon serve --install --host 127.0.0.1 --port 41414
 
-git clone https://github.com/<your-name>/M5Vitals.git
+git clone https://github.com/qinchuqiaox-creator/M5Vitals.git
 cd M5Vitals && ./build.sh   # needs only Xcode Command Line Tools
 open ~/Applications/M5Vitals.app
 ```
@@ -171,7 +171,7 @@ macmon が役に立ったら、ぜひスターを ⭐
 brew install macmon
 macmon serve --install --host 127.0.0.1 --port 41414
 
-git clone https://github.com/<your-name>/M5Vitals.git
+git clone https://github.com/qinchuqiaox-creator/M5Vitals.git
 cd M5Vitals && ./build.sh   # Xcode Command Line Tools のみで可
 open ~/Applications/M5Vitals.app
 ```
