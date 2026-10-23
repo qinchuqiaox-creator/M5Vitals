@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="assets/hero.png" width="620" alt="M5Vitals — minimal CPU/GPU temperature widget for the macOS desktop">
+<img src="assets/hero.png" width="366" alt="M5Vitals widget on the macOS desktop">
+  &nbsp;&nbsp;
+  <img src="assets/screenshot-2.png" width="366" alt="M5Vitals card close-up">
 
 # M5Vitals
 
