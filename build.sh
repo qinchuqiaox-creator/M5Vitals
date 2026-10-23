@@ -13,7 +13,7 @@ VERSION="1.0"
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 
-/usr/bin/swiftc -O -swift-version 5 \
+/usr/bin/swiftc -O -swift-version 5 -parse-as-library \
   -target arm64-apple-macos13.0 \
   -framework SwiftUI -framework AppKit \
   "$SRC" -o "$APP/Contents/MacOS/$APP_NAME"

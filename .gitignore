@@ -2,3 +2,5 @@
 *.app
 build/
 *.dSYM
+*.xcodeproj
+build/
